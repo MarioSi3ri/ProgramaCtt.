@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acordeon</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		.container {
+			width: 80%;
+			margin: auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+		}
+		.accordion {
+			border-top: 1px solid #ddd;
+			margin-top: 20px;
+		}
+		.accordion .accordion-header {
+			background-color: #ddd;
+			padding: 10px;
+			cursor: pointer;
+			font-weight: bold;
+			border-bottom: 1px solid #ccc;
+		}
+		.accordion .accordion-body {
+			padding: 10px;
+			display: none;
+			border-bottom: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	
+<div class="container">
+	
+<h1>Menú acordeón</h1>
+
+<div class="accordion">
+	
+<div class="accordion-header">Título del acordeón</div>
+
+<div class="accordion-body">
+	
+<p>Contenido del acordeón.</p>
+
+</div><!-- /.accordion-body -->
+
+</div><!-- /.accordion -->
+
+</div><!-- /.container -->
+
+<script type="text/javascript">
+	
+let accordionHeaders = document.querySelectorAll('.accordion-header');
+
+for (let i = 0; i < accordionHeaders.length; i++) {
+
+    accordionHeaders[i].addEventListener('click', function() {
+
+        let accordionBody = this.nextElementSibling;
+
+        if (accordionBody.style.display === 'block') {
+
+            accordionBody.style.display = 'none';
+
+        } else {
+
+            accordionBody.style.display = 'block';
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
